@@ -51,7 +51,7 @@ document.getElementById('update-exploit').addEventListener('click', () => {
 });
 
 ckbaj.addEventListener('change', (e) => {
-  //alert("WARNING :\nThis option make the jailbreak unstable and this option is not recommended please use the jailbreak button instead !");
+  //alert("تحذير :\هذا الخيار ليس مستقر برجاء لاتجعله تلقائي اضغط يدوي على زر !");
   localStorage.setItem('autojbstate', e.target.checked);
   onCheckboxChange(e.target.checked);
 });
@@ -122,7 +122,7 @@ function CheckFW() {
       fwVersion === '8.50' || fwVersion === '8.52' || fwVersion === '9.04' ||
       fwVersion === '9.50' || fwVersion === '9.51'
     ) {
-      document.getElementById('PS4FW').textContent = `PS4 FW: ${fwVersion} | Compatible`;
+      document.getElementById('PS4FW').textContent = `PS4 سوفت: ${fwVersion} | مدعوم`;
       document.getElementById('PS4FW').style.color = 'green';
       ps4fw = fwVersion.replace('.', '');
       document.getElementById('install-psfrf').style.display = 'flex';
@@ -133,7 +133,7 @@ function CheckFW() {
         document.getElementById('linuxb').style.display = 'flex';
       }
     } else {
-      document.getElementById('PS4FW').textContent = `PS4 FW: ${fwVersion || 'Unknown'} | Incompatible`;
+      document.getElementById('PS4FW').textContent = `PS4 سوفت: ${fwVersion || 'Unknown'} | |غير مدعوم`;
       document.getElementById('PS4FW').style.color = 'red';
 
       elementsToHide.forEach(id => {
@@ -142,7 +142,7 @@ function CheckFW() {
       });
     }
 
-    document.title = "PSFree | " + fwVersion;
+    document.title = "دوس اكس لتفعيل سوفت | " + fwVersion;
   } else {
     let platform = 'Unknown platform';
 
@@ -152,7 +152,7 @@ function CheckFW() {
     else if (/Windows/.test(userAgent)) platform = 'Windows';
     else if (/Linux/.test(userAgent)) platform = 'Linux';
 
-    document.getElementById('PS4FW').textContent = `You're not on a PS4, platform: ${platform}`;
+    document.getElementById('PS4FW').textContent = `أنت لست على منصة PS4: ${platform}`;
     document.getElementById('PS4FW').style.color = 'red';
 
     elementsToHide.forEach(id => {
