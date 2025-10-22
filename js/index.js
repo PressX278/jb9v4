@@ -133,7 +133,7 @@ function CheckFW() {
         document.getElementById('linuxb').style.display = 'flex';
       }
     } else {
-      document.getElementById('PS4FW').textContent = `PS4 سوفت: ${fwVersion || 'Unknown'} | |غير مدعوم`;
+      document.getElementById('PS4FW').textContent = `PS4 سوفت: ${fwVersion || 'Unknown'} | غير مدعوم`;
       document.getElementById('PS4FW').style.color = 'red';
 
       elementsToHide.forEach(id => {
